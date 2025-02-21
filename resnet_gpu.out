@@ -1,0 +1,27 @@
+---------------------------------------
+Begin Slurm Prolog: Feb-16-2025 12:39:25
+Job ID:    1299503
+User ID:   vdamineni3
+Account:   coc
+Job name:  resnet_gpu
+Partition: ice-gpu
+QOS:       coe-ice
+---------------------------------------
+Running on: cuda
+Image tensor shape: torch.Size([1, 3, 224, 224])
+Inference Time on CPU: 5.7081 seconds
+Inference Time on GPU: 5.7081 seconds
+GPU Memory Allocated: 106.49 MB
+GPU Memory Reserved: 168.00 MB
+---------------------------------------
+Begin Slurm Epilog: Feb-16-2025 12:39:46
+Job ID:        1299503
+User ID:       vdamineni3
+Account:       coc
+Job name:      resnet_gpu
+Resources:     cpu=4,gres/gpu:v100=1,mem=16G,node=1
+Rsrc Used:     cput=00:01:24,vmem=0,walltime=00:00:21,mem=2989872K,energy_used=0
+Partition:     ice-gpu
+QOS:           coe-ice
+Nodes:         atl1-1-01-002-7-0
+---------------------------------------

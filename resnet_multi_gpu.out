@@ -1,0 +1,77 @@
+---------------------------------------
+Begin Slurm Prolog: Feb-16-2025 12:44:29
+Job ID:    1299514
+User ID:   vdamineni3
+Account:   coc
+Job name:  resnet_multi_gpu
+Partition: ice-gpu
+QOS:       coe-ice
+---------------------------------------
+Lmod Warning:
+-------------------------------------------------------------------------------
+The following dependent module(s) are not currently loaded: xz/5.4.1 (required
+by: python/3.10.10)
+-------------------------------------------------------------------------------
+
+
+
+
+The following have been reloaded with a version change:
+  1) xz/5.4.1 => xz/5.2.5-y72uqzs
+
+/usr/local/pace-apps/spack/packages/linux-rhel9-x86_64_v3/gcc-11.3.1/python-3.10.10-3udzu6x4ehl4hglrzjzujjadkhcf7vvz/bin/python3
+Python 3.10.10
+Requirement already satisfied: numpy==1.26.4 in ./venv/lib/python3.10/site-packages (1.26.4)
+[2025-02-16 12:44:39,521] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/vdamineni3/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[2025-02-16 12:44:43,995] [WARNING] [runner.py:212:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected VISIBLE_DEVICES=0,1: setting --include=localhost:0,1
+[2025-02-16 12:44:43,996] [INFO] [runner.py:585:main] cmd = /home/hice1/vdamineni3/venv/bin/python3 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMV19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None run_resnet_multi_gpu.py
+[2025-02-16 12:44:47,830] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/vdamineni3/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[2025-02-16 12:44:51,220] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0, 1]}
+[2025-02-16 12:44:51,220] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=2, node_rank=0
+[2025-02-16 12:44:51,220] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1]})
+[2025-02-16 12:44:51,220] [INFO] [launch.py:164:main] dist_world_size=2
+[2025-02-16 12:44:51,220] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0,1
+[2025-02-16 12:44:51,222] [INFO] [launch.py:256:main] process 830336 spawned with command: ['/home/hice1/vdamineni3/venv/bin/python3', '-u', 'run_resnet_multi_gpu.py', '--local_rank=0']
+[2025-02-16 12:44:51,223] [INFO] [launch.py:256:main] process 830337 spawned with command: ['/home/hice1/vdamineni3/venv/bin/python3', '-u', 'run_resnet_multi_gpu.py', '--local_rank=1']
+[2025-02-16 12:44:55,034] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-02-16 12:44:55,040] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/vdamineni3/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/vdamineni3/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+NumPy Version:NumPy Version:  1.26.41.26.4
+
+[2025-02-16 12:44:58,932] [INFO] [comm.py:637:init_distributed] cdb=None
+[2025-02-16 12:44:58,932] [INFO] [comm.py:637:init_distributed] cdb=None
+[2025-02-16 12:44:58,932] [INFO] [comm.py:668:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+Running on: 2 GPUs
+Running on: 2 GPUs
+[2025-02-16 12:45:01,119] [WARNING] [config_utils.py:69:_process_deprecated_field] Config parameter replace_method is deprecated. This parameter is no longer needed, please remove from your call to DeepSpeed-inference
+[2025-02-16 12:45:01,133] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed info: version=0.14.5, git-hash=unknown, git-branch=unknown
+[2025-02-16 12:45:01,134] [WARNING] [config_utils.py:69:_process_deprecated_field] Config parameter replace_method is deprecated. This parameter is no longer needed, please remove from your call to DeepSpeed-inference
+[2025-02-16 12:45:01,134] [INFO] [logging.py:96:log_dist] [Rank 0] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+Inference Time on 2 GPUs: 3.0654 secondsInference Time on 2 GPUs: 3.0594 seconds
+
+[2025-02-16 12:45:06,239] [INFO] [launch.py:351:main] Process 830336 exits successfully.
+[2025-02-16 12:45:06,239] [INFO] [launch.py:351:main] Process 830337 exits successfully.
+---------------------------------------
+Begin Slurm Epilog: Feb-16-2025 12:45:08
+Job ID:        1299514
+User ID:       vdamineni3
+Account:       coc
+Job name:      resnet_multi_gpu
+Resources:     cpu=8,gres/gpu:v100=2,mem=32G,node=1
+Rsrc Used:     cput=00:05:20,vmem=0,walltime=00:00:40,mem=4980116K,energy_used=0
+Partition:     ice-gpu
+QOS:           coe-ice
+Nodes:         atl1-1-01-002-7-0
+---------------------------------------
